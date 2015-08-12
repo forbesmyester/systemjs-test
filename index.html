@@ -1,0 +1,19 @@
+<html>
+<script src="./node_modules/systemjs/dist/system.js"></script>
+<script>
+  // meta: {
+  //   'index.esm.js': {
+  //     format: 'es6'
+  //   }
+  // },
+  System.config({
+    baseURL: '/src',
+    map: {
+      babel: '/node_modules/babel-core/browser.js'
+    },
+    transpiler: 'babel',
+    babelOptions: {
+    }
+  });
+  System.import('index.esm.js')
+</script>
